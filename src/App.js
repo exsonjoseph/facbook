@@ -21,7 +21,7 @@ function App() {
 const [ data , setData] = useState(initalData)
 
   const handSubmit = async(e) =>{
-    const hash = bcrypt.hash(data.password, salt);
+    // const hash = bcrypt.hash(data.password, salt);
     await addDoc(collection(db, 'FacebookData'),{data});
     console.log(data)
   }
